@@ -1,7 +1,7 @@
 import express from "express";
 const app = express();
 const PORT= 3000;
-
+app.use(express.static("public"));
 app.get("/",(req,res)=>{
   res.render("index.ejs");
 });
@@ -13,5 +13,5 @@ app.get("/about",(req,res)=>{
 });
 
 app.listen(PORT, () => {
-  console.log(`Server running on port ${port}`);
+  console.log(`Server running on port ${PORT}`);
 });
